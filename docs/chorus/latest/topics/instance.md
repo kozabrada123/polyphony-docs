@@ -52,4 +52,16 @@ Logging in or registering will provide you with a [ChorusUser](https://docs.rs/c
 
 This struct represents an authenticated user account on an instance.
 
-It is used to provide auth to api routes that need it.
+It is used to provide auth to API routes that need it.
+
+For example, to fetch the local user's User object:
+
+```rs
+
+// Get with the id (second parameter) none, to get the local user
+let local_user = User::get(&mut chorus_user, None).await.expect("Failed to get local user");
+dbg!(local_user);
+
+```
+
+It also contains info about the user (`ChorusUser.object`), an active [Gateway](../gateway) connection (`ChorusUser.gateway`) and the user's settings (`ChorusUser.settings`).
