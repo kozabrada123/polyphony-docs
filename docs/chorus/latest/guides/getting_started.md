@@ -4,8 +4,10 @@ To get started with Chorus, import it into your project by adding the following 
 
 ```toml
 [dependencies]
-chorus = "0.14.0"
+chorus = "0.15.0"
 ```
+
+Depending on what you want to do with chorus, [there are several different crate features you may want to enable](../topics/features.md).
 
 The heart of Chorus is the connection to a Spacebar compatible server.
 
